@@ -14,6 +14,9 @@ if (numeroB > numeroA) {
     numeroB.value = '';
 } else if (numeroB === numeroA) {
     mensagem.textContent = 'Para comparação os números não poder ser iguais.';
+    mensagem.style.color = 'black';
+    numeroA.value = '';
+    numeroB.value = '';
 } else {
     mensagem.textContent = `Número no campo A é ${numeroA}, sendo assim maior que no campo B que é ${numeroB}. Comparação Inválida.`;
     mensagem.style.color = 'red';
