@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio_html_js</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="calculo">
+        <form id="formCalculo">
+            <h1>Verificar número</h1>
+            <h4>Comparar campos A e B</h4>
+            <div class="form">
+                <label for="labe-numberA">Insira um número para comparação:</label>
+                <input id="numeroA"type="number" placeholder="Campo A" required>
+                <label for="labelnumeroB">Insira o segundo número:</label>
+                <input id="numeroB" type="number" placeholder="Campo B" required>
+                <button class="calcular" type="submit">Calcular</button>
+            </div>
+        </form>
+        <div class="respota-robo">
+            <img class="robo" src="./imagens/robo.png" alt="robo de dicas">
+            <div class="resposta">
+                <p id="mensagem">
+                    Para ser <b>válido</b> o campo B tem que ser maior que o campo A?
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
