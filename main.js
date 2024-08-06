@@ -24,4 +24,4 @@ if (numeroB > numeroA) {
     numeroB.value = '';
 } 
 
-})
+});
