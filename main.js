@@ -1,27 +1,25 @@
 const form = document.getElementById('formCalculo');
+const numeroA = document.getElementById('numeroA');
+const numeroB = document.getElementById('numeroB');
+const mensagem = document.getElementById('mensagem');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-const numeroA = document.getElementById('numeroA').value;
-const numeroB = document.getElementById('numeroB').value;
-const mensagem = document.getElementById('mensagem');
+const valorNumeroA = Number(numeroA.value);
+const valorNumeroB = Number(numeroB.value);
 
-if (numeroB > numeroA) {
-    mensagem.textContent = `Número no campo B é ${numeroB}, sendo assim maior que no campo A que é ${numeroA}. Comparação Válida`;
+if (valorNumeroB > valorNumeroA) {
+    mensagem.textContent = `Está VALIDO, campo B: ${valorNumeroB} é maior que campo A: ${valorNumeroA}.`;
     mensagem.style.color = 'green';
-    numeroA.value = '';
-    numeroB.value = '';
-} else if (numeroB === numeroA) {
+} else if (valorNumeroB === valorNumeroA) {
     mensagem.textContent = 'Para comparação os números não poder ser iguais.';
     mensagem.style.color = 'black';
-    numeroA.value = '';
-    numeroB.value = '';
 } else {
-    mensagem.textContent = `Número no campo A é ${numeroA}, sendo assim maior que no campo B que é ${numeroB}. Comparação Inválida.`;
+    mensagem.textContent = `Está INVALIDO, campo A: ${valorNumeroA} é maior que campo B: ${valorNumeroB}.`;
     mensagem.style.color = 'red';
-    numeroA.value = '';
-    numeroB.value = '';
 } 
 
-})
+document.getElementById('numeroA').value='';
+document.getElementById('numeroB').value='';
+});
